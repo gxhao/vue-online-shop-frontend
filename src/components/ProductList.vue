@@ -5,20 +5,25 @@
         This is ProductList
       </div>
       <template v-for="product in products">
-        <div :key="product._id" class="product">
-          <!-- 其他字段 -->
-          <p class="product.manufacturer">生产厂商：{{product.manufacturer.name}}</p>
-          <img :src="product.image" alt="" class="product__image">
-          <button @click="addToCart(product)">加入购物车</button>
-        </div>
+        <product-item :product="product" :key="product._id"></product-item>
       </template>
     </div>
   </div>
 </template>
 
-<!-- style -->
+<style>
+.product {
+  border-bottom: 1px solid black;
+}
+
+.product__image {
+  width: 100px;
+  height: 100px;
+}
+</style>
 
 <script>
+import ProductItem from './ProductItem.vue';
 export default {
   name: 'product-list',
   created() {
@@ -27,10 +32,13 @@ export default {
     }
   },
   computed: {
-    // ...
+    // a computed getter
+    products() {
+      return this.$store.state.products;
+    }
   },
-  methods: {
-    // ...
+  components: {
+    'product-item': ProductItem
   }
 }
 </script>

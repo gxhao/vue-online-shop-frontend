@@ -42,7 +42,7 @@ export default new Vuex.Store({
   actions: {
     allProducts({ commit }) {
       commit('ALL_PRODUCTS')
-
+      console.log('请求后端方法');
       axios.get(`${API_BASE}/products`).then(response => {
         console.log('response', response);
         commit('ALL_PRODUCTS_SUCCESS', {
