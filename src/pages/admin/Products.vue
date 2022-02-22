@@ -40,9 +40,9 @@ table {
 <script>
 export default {
   created() {
-    if (this.products.length === 0) {
+      if (this.products.length === 0) {
       this.$store.dispatch('allProducts');
-    }
+    } 
   },
   computed: {
     products() {
@@ -63,3 +63,4 @@ export default {
     }
   }
 }
+</script>

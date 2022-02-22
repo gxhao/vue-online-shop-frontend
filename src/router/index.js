@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
 import Detail from '@/pages/Detail';
+import Admin from '@/pages/Admin';
 
 // Admin Components
 import Index from '@/pages/admin/Index';
