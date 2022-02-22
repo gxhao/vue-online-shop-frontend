@@ -13,6 +13,12 @@
             <li>
               <router-link to="/admin/products">products</router-link>
             </li>
+            <li>
+              <router-link to="/admin/manufacturers">show manufacturers</router-link>
+            </li>
+            <li>
+              <router-link to="/admin/manufacturers/new">add manufacturers</router-link>
+            </li>
           </ul>
         </div>
         <router-view></router-view>
