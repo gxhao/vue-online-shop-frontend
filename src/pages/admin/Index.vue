@@ -11,7 +11,10 @@
               <router-link to="/admin/new">New Products</router-link>
             </li>
             <li>
-              <router-link to="/admin/products">products</router-link>
+              <router-link to="/admin/manufacturers">show manufacturers</router-link>
+            </li>
+            <li>
+              <router-link to="/admin/manufacturers/new">add manufacturers</router-link>
             </li>
           </ul>
         </div>
