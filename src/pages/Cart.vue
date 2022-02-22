@@ -3,23 +3,17 @@
     <div class="title">
       <h1>{{msg}}</h1>
     </div>
-    <template v-for="product in cart">
-      <product-item :product="product" :key="product._id"></product-item>
-    </template>
+    <product-item :products="cart"></product-item>
   </div>
 </template>
 
-<!-- style -->
-
-<!-- script -->
 <script>
 import ProductItem from '@/components/ProductItem.vue';
-
-export default {
-   name: 'home',
+  export default {
+    name: 'home',
     data () {
-      return{
-        msg : "Welcome to the Cart Page"
+      return {
+        msg: 'Welcome to the Cart Page'
       }
     },
     computed: {
@@ -30,5 +24,5 @@ export default {
     components: {
       'product-item': ProductItem
     }
-}
+  }
 </script>
