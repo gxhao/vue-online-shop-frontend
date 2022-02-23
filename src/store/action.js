@@ -23,6 +23,8 @@ import {
   REMOVE_MANUFACTURER_SUCCESS,
 } from './mutation-types';
 
+import { Message } from 'element-ui';
+
 const API_BASE = 'http://localhost:3000/api/v1';
 
 export const productActions = {
@@ -50,11 +52,19 @@ export const productActions = {
     commit(REMOVE_PRODUCT);
 
     const { productId } = payload;
-    axios.delete(`${API_BASE}/products/${productId}`).then(() => {
+    axios.delete(`${API_BASE}/products/${productId}`).
+     then(() => {
       // 返回 productId，用于删除本地对应的商品
       commit(REMOVE_PRODUCT_SUCCESS, {
         productId,
       });
+      Message({
+        message: '恭喜你，商品删除成功！',
+        type: 'success'
+      })
+     })
+     .catch(() => {
+      Message.error('不好意思，商品删除失败！');
     })
   },
   updateProduct({ commit }, payload) {
@@ -65,6 +75,13 @@ export const productActions = {
       commit(UPDATE_PRODUCT_SUCCESS, {
         product,
       });
+      Message({
+        message: '恭喜你，商品添加成功！',
+        type: 'success'
+      })
+    })
+    .catch(() => {
+      Message.error('不好意思，商品添加失败！');
     })
   },
   addProduct({ commit }, payload) {
