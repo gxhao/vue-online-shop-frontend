@@ -11,7 +11,7 @@ import Index from '@/pages/admin/Index';
 import New from '@/pages/admin/New';
 import Products from '@/pages/admin/Products';
 import Edit from '@/pages/admin/Edit';
-import Manufacturers from '@/pages/admin/manufacturers';
+import Manufacturers from '@/pages/admin/Manufacturers';
 import NewManufacturers from '@/pages/admin/NewManufacturers';
 import EditManufacturers from '@/pages/admin/EditManufacturers'
 
