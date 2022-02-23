@@ -37,4 +37,4 @@ export default new Vuex.Store({
     ...productActions,
     ...manufacturerActions,
   }
-});
+})
